@@ -37,6 +37,7 @@
                             <ul class="dropdown-menu" aria-labelledby="languageDropdown">
                                 <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">English</a></li>
                                 <li><a class="dropdown-item" href="#" onclick="changeLanguage('de')">Deutsch</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="changeLanguage('nl')">Nederlands</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -93,6 +94,9 @@
                             <li>Get answers to any questions about the region and your trip</li>
                         </ul>
                         <p>The more specific your questions, the more tailored our recommendations will be!</p>
+                        <div class="mt-4">
+                            <img src="images/wachau-vineyard.jpg" alt="Wachau Vineyards" class="img-fluid rounded">
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <div class="card h-100">
@@ -147,7 +151,72 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question5" aria-expanded="false" aria-controls="question5">
+                                                What are the must-see attractions in the region?
+                                            </button>
+                                        </h2>
+                                        <div id="question5" class="accordion-collapse collapse" data-bs-parent="#popularQuestionsAccordion">
+                                            <div class="accordion-body">
+                                                Must-see attractions include Dürnstein Castle ruins, Melk Abbey, Göttweig Abbey, the historic towns of Krems and Spitz, and the terraced vineyards of the Wachau Valley. Don't miss a river cruise on the Danube to see the valley from a different perspective.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question6" aria-expanded="false" aria-controls="question6">
+                                                How long should I stay in the Wachau region?
+                                            </button>
+                                        </h2>
+                                        <div id="question6" class="accordion-collapse collapse" data-bs-parent="#popularQuestionsAccordion">
+                                            <div class="accordion-body">
+                                                We recommend at least 3-5 days to fully experience the Wachau region. This allows time for wine tasting, biking along the Danube, visiting historic sites, and enjoying the local cuisine without feeling rushed.
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="assistant-examples py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">What You Can Ask Our AI Assistant</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="example-card h-100">
+                            <img src="images/cycling-path.jpg" alt="Biking in Wachau" class="img-fluid rounded mb-3">
+                            <h3>Biking Adventures</h3>
+                            <p>Ask about bike rental options, the best cycling routes in the region, guided tours, and difficulty levels for different paths.</p>
+                            <div class="example-questions">
+                                <p><em>"What are the most scenic biking routes in Wachau?"</em></p>
+                                <p><em>"How much does bike rental cost for a week?"</em></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="example-card h-100">
+                            <img src="images/wachau-vineyard.jpg" alt="Wine Tours" class="img-fluid rounded mb-3">
+                            <h3>Wine Experiences</h3>
+                            <p>Inquire about wine tours, tastings, the best vineyards to visit, and special wine events happening during your stay.</p>
+                            <div class="example-questions">
+                                <p><em>"Which wineries offer the best Grüner Veltliner tastings?"</em></p>
+                                <p><em>"Are there any wine festivals in September?"</em></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="example-card h-100">
+                            <img src="images/durnstein-tower.jpg" alt="Cultural Sites" class="img-fluid rounded mb-3">
+                            <h3>Cultural Heritage</h3>
+                            <p>Learn about historical sites, museums, cultural events, and guided tours of the region's rich heritage.</p>
+                            <div class="example-questions">
+                                <p><em>"What's the history of Dürnstein Castle?"</em></p>
+                                <p><em>"Are there guided tours of Melk Abbey in English?"</em></p>
                             </div>
                         </div>
                     </div>
@@ -211,5 +280,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/translations.js"></script>
 </body>
 </html>

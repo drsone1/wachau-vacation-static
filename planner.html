@@ -37,6 +37,7 @@
                             <ul class="dropdown-menu" aria-labelledby="languageDropdown">
                                 <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">English</a></li>
                                 <li><a class="dropdown-item" href="#" onclick="changeLanguage('de')">Deutsch</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="changeLanguage('nl')">Nederlands</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -48,13 +49,16 @@
     <main>
         <section class="planner-header-section py-5 bg-light">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto text-center">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
                         <h1 class="section-title mb-4">Plan Your Perfect Wachau Vacation</h1>
                         <p class="lead mb-4">Tell us about your preferences, and we'll create a personalized vacation plan for the Wachau, Krems, and Kamptal regions. We'll handle all the bookings and provide you with a comprehensive vacation document.</p>
                         <div class="alert alert-info">
                             <i class="fas fa-info-circle me-2"></i> Your vacation plan includes accommodations, activities, restaurant reservations, and a service fee. You'll pay one total amount for everything.
                         </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="images/danube-cruise.jpg" alt="Danube River Cruise" class="img-fluid rounded shadow">
                     </div>
                 </div>
             </div>
@@ -67,7 +71,7 @@
                         <div class="card shadow">
                             <div class="card-body p-4">
                                 <div class="step-indicator mb-5">
-                                    <div class="step-indicator-item">
+                                    <div class="step-indicator-item active">
                                         <div class="step-indicator-number">1</div>
                                         <div class="step-indicator-text">Basic Info</div>
                                     </div>
@@ -91,7 +95,7 @@
                                 
                                 <form id="vacation-planner-form" class="vacation-planner-form">
                                     <!-- Step 1: Basic Information -->
-                                    <div class="form-step">
+                                    <div class="form-step active">
                                         <h3 class="mb-4">Basic Information</h3>
                                         
                                         <div class="row mb-3">
@@ -225,7 +229,7 @@
                                                 <option value="">Select</option>
                                                 <option value="hotel">Hotel</option>
                                                 <option value="guesthouse">Guesthouse / B&B</option>
-                                                <option value="apartment">Vacation Apartment</option>
+                                                <option value="apartment">Apartment / Vacation Rental</option>
                                                 <option value="winery">Winery Accommodation</option>
                                                 <option value="luxury">Luxury Resort</option>
                                             </select>
@@ -244,7 +248,7 @@
                                         </div>
                                         
                                         <div class="mb-4">
-                                            <p class="mb-2">Important Amenities (Select all that apply)</p>
+                                            <label class="form-label">Important Amenities (Select all that apply)</label>
                                             <div class="row">
                                                 <div class="col-md-6 mb-2">
                                                     <div class="form-check">
@@ -287,7 +291,7 @@
                                         
                                         <div class="mb-4">
                                             <label for="accommodation-notes" class="form-label">Additional Accommodation Requests</label>
-                                            <textarea class="form-control" id="accommodation-notes" name="accommodation_notes" rows="2" placeholder="Any specific requests or preferences for your accommodation"></textarea>
+                                            <textarea class="form-control" id="accommodation-notes" name="accommodation_notes" rows="3" placeholder="E.g., specific location preferences, accessibility requirements, etc."></textarea>
                                         </div>
                                         
                                         <div class="d-flex justify-content-between">
@@ -300,71 +304,69 @@
                                     <div class="form-step">
                                         <h3 class="mb-4">Activities & Experiences</h3>
                                         
-                                        <div class="mb-4">
-                                            <p class="mb-2">Which activities would you like to include in your vacation? (Select all that apply)</p>
-                                            
-                                            <div class="row">
-                                                <div class="col-md-6 mb-3">
+                                        <div class="row mb-4">
+                                            <div class="col-md-6">
+                                                <div class="activity-card mb-3">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" id="activity-wine-tasting" name="activities" value="wine_tasting">
-                                                        <label class="form-check-label" for="activity-wine-tasting">
-                                                            <i class="fas fa-wine-bottle me-2 text-primary"></i> Winery Tours & Tastings
+                                                        <input class="form-check-input" type="checkbox" id="activity-wine-tour" name="activities" value="wine-tour">
+                                                        <label class="form-check-label" for="activity-wine-tour">
+                                                            <strong>Guided Wine Tour</strong>
+                                                            <p class="text-muted small mb-0">Visit multiple wineries with a knowledgeable guide</p>
                                                         </label>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6 mb-3">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="activity-card mb-3">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" id="activity-bike-rental" name="activities" value="bike_rental">
+                                                        <input class="form-check-input" type="checkbox" id="activity-bike-rental" name="activities" value="bike-rental">
                                                         <label class="form-check-label" for="activity-bike-rental">
-                                                            <i class="fas fa-bicycle me-2 text-primary"></i> Bike Rental & Routes
+                                                            <strong>Bike Rental</strong>
+                                                            <p class="text-muted small mb-0">Explore the region on two wheels</p>
                                                         </label>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6 mb-3">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="activity-card mb-3">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" id="activity-danube-cruise" name="activities" value="danube_cruise">
-                                                        <label class="form-check-label" for="activity-danube-cruise">
-                                                            <i class="fas fa-ship me-2 text-primary"></i> Danube River Cruise
+                                                        <input class="form-check-input" type="checkbox" id="activity-river-cruise" name="activities" value="river-cruise">
+                                                        <label class="form-check-label" for="activity-river-cruise">
+                                                            <strong>Danube River Cruise</strong>
+                                                            <p class="text-muted small mb-0">See the Wachau Valley from the water</p>
                                                         </label>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6 mb-3">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="activity-card mb-3">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" id="activity-guided-tour" name="activities" value="guided_tour">
-                                                        <label class="form-check-label" for="activity-guided-tour">
-                                                            <i class="fas fa-map-marked-alt me-2 text-primary"></i> Guided Historical Tours
+                                                        <input class="form-check-input" type="checkbox" id="activity-abbey-tour" name="activities" value="abbey-tour">
+                                                        <label class="form-check-label" for="activity-abbey-tour">
+                                                            <strong>Melk Abbey Tour</strong>
+                                                            <p class="text-muted small mb-0">Visit the magnificent Benedictine abbey</p>
                                                         </label>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6 mb-3">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="activity-card mb-3">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" id="activity-cooking" name="activities" value="cooking">
-                                                        <label class="form-check-label" for="activity-cooking">
-                                                            <i class="fas fa-utensils me-2 text-primary"></i> Cooking Class / Food Tour
+                                                        <input class="form-check-input" type="checkbox" id="activity-cooking-class" name="activities" value="cooking-class">
+                                                        <label class="form-check-label" for="activity-cooking-class">
+                                                            <strong>Austrian Cooking Class</strong>
+                                                            <p class="text-muted small mb-0">Learn to prepare local specialties</p>
                                                         </label>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6 mb-3">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="activity-card mb-3">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" id="activity-hiking" name="activities" value="hiking">
-                                                        <label class="form-check-label" for="activity-hiking">
-                                                            <i class="fas fa-hiking me-2 text-primary"></i> Hiking Excursions
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 mb-3">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" id="activity-spa" name="activities" value="spa">
-                                                        <label class="form-check-label" for="activity-spa">
-                                                            <i class="fas fa-spa me-2 text-primary"></i> Spa & Wellness Treatments
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 mb-3">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" id="activity-photography" name="activities" value="photography">
-                                                        <label class="form-check-label" for="activity-photography">
-                                                            <i class="fas fa-camera me-2 text-primary"></i> Photography Tour
+                                                        <input class="form-check-input" type="checkbox" id="activity-hiking-tour" name="activities" value="hiking-tour">
+                                                        <label class="form-check-label" for="activity-hiking-tour">
+                                                            <strong>Guided Hiking Tour</strong>
+                                                            <p class="text-muted small mb-0">Explore scenic trails with a local guide</p>
                                                         </label>
                                                     </div>
                                                 </div>
@@ -376,16 +378,16 @@
                                             <select class="form-select" id="dining-preferences" name="dining_preferences" required>
                                                 <option value="">Select</option>
                                                 <option value="traditional">Traditional Austrian Cuisine</option>
-                                                <option value="fine_dining">Fine Dining Experiences</option>
-                                                <option value="wine_taverns">Local Wine Taverns (Heurigen)</option>
-                                                <option value="mix">Mix of Different Options</option>
-                                                <option value="self_catering">Mostly Self-Catering</option>
+                                                <option value="fine-dining">Fine Dining Experiences</option>
+                                                <option value="wine-pairing">Wine Pairing Dinners</option>
+                                                <option value="casual">Casual Local Restaurants</option>
+                                                <option value="mix">Mix of Different Experiences</option>
                                             </select>
                                         </div>
                                         
                                         <div class="mb-4">
-                                            <label for="activity-notes" class="form-label">Any specific activities or restaurants you'd like to include?</label>
-                                            <textarea class="form-control" id="activity-notes" name="activity_notes" rows="2" placeholder="E.g., specific restaurants, activities, or experiences you're interested in"></textarea>
+                                            <label for="activity-notes" class="form-label">Additional Activity Requests</label>
+                                            <textarea class="form-control" id="activity-notes" name="activity_notes" rows="3" placeholder="Any other activities or experiences you'd like us to include in your itinerary"></textarea>
                                         </div>
                                         
                                         <div class="d-flex justify-content-between">
@@ -420,24 +422,17 @@
                                         </div>
                                         
                                         <div class="mb-4">
-                                            <label for="additional-info" class="form-label">Additional Information</label>
-                                            <textarea class="form-control" id="additional-info" name="additional_info" rows="3" placeholder="Any other information you'd like us to know"></textarea>
-                                        </div>
-                                        
-                                        <div class="mb-4 form-check">
-                                            <input type="checkbox" class="form-check-input" id="terms-check" name="terms_accepted" required>
-                                            <label class="form-check-label" for="terms-check">
-                                                I accept the <a href="terms.html" target="_blank">Terms of Service</a> and understand that a service fee is included in the total price.
-                                            </label>
-                                        </div>
-                                        
-                                        <div class="alert alert-info mb-4">
-                                            <p class="mb-0"><i class="fas fa-info-circle me-2"></i> After submitting this form, we'll create a personalized vacation plan for you. Once you approve it, we'll handle all the bookings and send you a comprehensive vacation document.</p>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="terms-agreement" name="terms_agreement" required>
+                                                <label class="form-check-label" for="terms-agreement">
+                                                    I agree to the <a href="terms.html" target="_blank">Terms of Service</a> and understand the <a href="terms.html#disclaimer" target="_blank">Disclaimer</a>
+                                                </label>
+                                            </div>
                                         </div>
                                         
                                         <div class="d-flex justify-content-between">
                                             <button type="button" class="btn btn-outline-secondary btn-prev"><i class="fas fa-arrow-left me-2"></i> Previous</button>
-                                            <button type="submit" class="btn btn-success">Submit Request</button>
+                                            <button type="submit" class="btn btn-success">Submit <i class="fas fa-check ms-2"></i></button>
                                         </div>
                                     </div>
                                 </form>
@@ -448,78 +443,80 @@
             </div>
         </section>
         
-        <section class="faq-section py-5 bg-light">
+        <section class="vacation-examples py-5 bg-light">
             <div class="container">
-                <h2 class="section-title text-center mb-5">Frequently Asked Questions</h2>
-                
+                <h2 class="section-title text-center mb-5">Sample Vacation Plans</h2>
                 <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <div class="accordion" id="faqAccordion">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
-                                        What's included in your vacation planning service?
-                                    </button>
-                                </h2>
-                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        Our vacation planning service includes creating a personalized itinerary based on your preferences, booking accommodations, making restaurant reservations, arranging activities and experiences, and providing you with a comprehensive vacation document. We handle all the bookings for you, and you pay one total amount that includes our service fee.
-                                    </div>
-                                </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="images/wachau-vineyard.jpg" class="card-img-top" alt="Wine Lover's Getaway">
+                            <div class="card-body">
+                                <h3 class="card-title">Wine Lover's Getaway</h3>
+                                <p class="card-text">A 4-day immersion in the world-renowned wines of the Wachau Valley, with guided tastings, vineyard tours, and gourmet dining experiences.</p>
+                                <ul class="list-unstyled mb-0">
+                                    <li><i class="fas fa-check-circle text-success me-2"></i> Daily wine tastings</li>
+                                    <li><i class="fas fa-check-circle text-success me-2"></i> Winery accommodation</li>
+                                    <li><i class="fas fa-check-circle text-success me-2"></i> Gourmet dining</li>
+                                    <li><i class="fas fa-check-circle text-success me-2"></i> From €1,200 per person</li>
+                                </ul>
                             </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
-                                        How much is the service fee?
-                                    </button>
-                                </h2>
-                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        Our service fee is calculated as a percentage of the total vacation cost, typically ranging from 10-15% depending on the complexity of the itinerary and the services included. The exact fee will be clearly indicated in your vacation plan before you confirm the booking.
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="images/cycling-path.jpg" class="card-img-top" alt="Active Adventure">
+                            <div class="card-body">
+                                <h3 class="card-title">Active Adventure</h3>
+                                <p class="card-text">A 5-day active vacation combining cycling along the Danube, hiking in the vineyards, and exploring the region's natural beauty.</p>
+                                <ul class="list-unstyled mb-0">
+                                    <li><i class="fas fa-check-circle text-success me-2"></i> Bike rental included</li>
+                                    <li><i class="fas fa-check-circle text-success me-2"></i> Guided hiking tours</li>
+                                    <li><i class="fas fa-check-circle text-success me-2"></i> Riverside accommodation</li>
+                                    <li><i class="fas fa-check-circle text-success me-2"></i> From €950 per person</li>
+                                </ul>
                             </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
-                                        What happens after I submit this form?
-                                    </button>
-                                </h2>
-                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        After you submit the form, we'll create a personalized vacation plan based on your preferences within 48 hours. We'll send this plan to you for review, and you can request any adjustments. Once you approve the plan, we'll handle all the bookings and send you a confirmation with a comprehensive vacation document.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
-                                        Can I make changes to my vacation plan after booking?
-                                    </button>
-                                </h2>
-                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        Yes, you can request changes to your vacation plan after booking, subject to availability and any change fees imposed by the service providers. We'll do our best to accommodate your requests, but please note that changes made close to your arrival date may be limited.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
-                                        What is your cancellation policy?
-                                    </button>
-                                </h2>
-                                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        Our cancellation policy varies depending on the services included in your vacation plan. Generally, cancellations made 30+ days before arrival receive a full refund minus the service fee. Cancellations made 15-29 days before arrival receive a 50% refund. Cancellations made less than 15 days before arrival are non-refundable. The specific cancellation policy for your booking will be clearly stated in your vacation plan.
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="images/melk-abbey.jpg" class="card-img-top" alt="Cultural Exploration">
+                            <div class="card-body">
+                                <h3 class="card-title">Cultural Exploration</h3>
+                                <p class="card-text">A 6-day journey through the rich history and culture of the Wachau region, visiting abbeys, castles, and historic towns.</p>
+                                <ul class="list-unstyled mb-0">
+                                    <li><i class="fas fa-check-circle text-success me-2"></i> Guided tours of historic sites</li>
+                                    <li><i class="fas fa-check-circle text-success me-2"></i> Danube river cruise</li>
+                                    <li><i class="fas fa-check-circle text-success me-2"></i> Boutique hotel stays</li>
+                                    <li><i class="fas fa-check-circle text-success me-2"></i> From €1,400 per person</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        
+        <!-- Vacation Plan Preview Modal -->
+        <div class="modal fade" id="vacationPlanModal" tabindex="-1" aria-labelledby="vacationPlanModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="vacationPlanModalLabel">Your Personalized Vacation Plan</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="vacation-plan-content">
+                            <!-- Content will be dynamically generated -->
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="send-to-email-btn">Send to My Email</button>
+                        <button type="button" class="btn btn-success" id="proceed-to-checkout-btn">Proceed to Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="footer bg-dark text-white py-4">
@@ -569,5 +566,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/translations.js"></script>
 </body>
 </html>
