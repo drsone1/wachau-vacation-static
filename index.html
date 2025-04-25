@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wachau Vacation Planner</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Wachau Vacation Planner</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="planner.html">Vacation Planner</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="assistant.html">AI Assistant</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="terms.html">Terms</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-globe"></i> Language
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                                <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">English</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="changeLanguage('de')">Deutsch</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1 class="hero-title">Discover the Beauty of Wachau</h1>
+                        <p class="hero-subtitle">Plan your perfect vacation in the Wachau, Krems, and Kamptal regions of Austria</p>
+                        <div class="hero-buttons">
+                            <a href="planner.html" class="btn btn-primary btn-lg">Plan Your Trip</a>
+                            <a href="assistant.html" class="btn btn-outline-primary btn-lg ms-2">Ask AI Assistant</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="images/wachau-hero.jpg" alt="Wachau Valley" class="img-fluid rounded hero-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Why Choose Our Vacation Planning Service</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-card text-center p-4 h-100">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-wine-glass-alt fa-3x text-primary"></i>
+                            </div>
+                            <h3 class="feature-title">Wine Experiences</h3>
+                            <p class="feature-text">Explore world-renowned vineyards and taste exceptional wines from the Wachau, Krems, and Kamptal regions.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-card text-center p-4 h-100">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-bicycle fa-3x text-primary"></i>
+                            </div>
+                            <h3 class="feature-title">Biking Adventures</h3>
+                            <p class="feature-text">Cycle through picturesque landscapes along the Danube River with our curated biking routes and rental services.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-card text-center p-4 h-100">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-concierge-bell fa-3x text-primary"></i>
+                            </div>
+                            <h3 class="feature-title">All-Inclusive Service</h3>
+                            <p class="feature-text">We handle all bookings, reservations, and planning, providing you with a comprehensive vacation document.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Wachau Section -->
+        <section class="about-section py-5 bg-light">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <img src="images/wachau-landscape.jpg" alt="Wachau Landscape" class="img-fluid rounded">
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="section-title mb-4">About the Wachau Region</h2>
+                        <p>The Wachau is a picturesque valley in Lower Austria, formed by the Danube river. This UNESCO World Heritage site is known for its stunning landscapes, historic towns, and world-class vineyards.</p>
+                        <p>The region encompasses the Wachau valley itself, along with the nearby Krems and Kamptal areas, each offering unique experiences for visitors:</p>
+                        <ul class="region-features">
+                            <li><strong>Wachau Valley:</strong> Famous for its terraced vineyards, apricot orchards, and medieval castles</li>
+                            <li><strong>Krems:</strong> A charming city with a historic center, contemporary art, and excellent restaurants</li>
+                            <li><strong>Kamptal:</strong> Known for its exceptional wines and beautiful countryside perfect for hiking</li>
+                        </ul>
+                        <a href="planner.html" class="btn btn-primary mt-3">Plan Your Visit</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works-section py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">How Our Service Works</h2>
+                <div class="row">
+                    <div class="col-md-3 mb-4">
+                        <div class="step-card text-center p-4 h-100">
+                            <div class="step-number mb-3">1</div>
+                            <h3 class="step-title">Share Your Preferences</h3>
+                            <p class="step-text">Tell us about your interests, budget, and desired experiences in the Wachau region.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="step-card text-center p-4 h-100">
+                            <div class="step-number mb-3">2</div>
+                            <h3 class="step-title">We Create Your Plan</h3>
+                            <p class="step-text">Our team designs a personalized itinerary with accommodations, activities, and dining options.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="step-card text-center p-4 h-100">
+                            <div class="step-number mb-3">3</div>
+                            <h3 class="step-title">Confirm & Pay</h3>
+                            <p class="step-text">Review your custom vacation plan, make any adjustments, and complete your booking with a single payment.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="step-card text-center p-4 h-100">
+                            <div class="step-number mb-3">4</div>
+                            <h3 class="step-title">Enjoy Your Trip</h3>
+                            <p class="step-text">Receive your comprehensive vacation document and enjoy a stress-free experience in the Wachau region.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="planner.html" class="btn btn-primary btn-lg">Start Planning Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section py-5 bg-light">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">What Our Customers Say</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="testimonial-card p-4 h-100">
+                            <div class="testimonial-stars mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="testimonial-text">"Our vacation in the Wachau region was absolutely perfect. The personalized itinerary included amazing wineries, beautiful bike routes, and charming accommodations. Everything was taken care of!"</p>
+                            <div class="testimonial-author">
+                                <strong>Sarah & Michael</strong>, Germany
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="testimonial-card p-4 h-100">
+                            <div class="testimonial-stars mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="testimonial-text">"The AI assistant was incredibly helpful in planning our trip. The service fee was well worth it for the convenience of having all our bookings handled and receiving a comprehensive vacation guide."</p>
+                            <div class="testimonial-author">
+                                <strong>John & Lisa</strong>, United States
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="testimonial-card p-4 h-100">
+                            <div class="testimonial-stars mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star-half-alt text-warning"></i>
+                            </div>
+                            <p class="testimonial-text">"We discovered hidden gems in the Wachau region that we would have never found on our own. The restaurant recommendations were exceptional, and the bike rental was arranged perfectly."</p>
+                            <div class="testimonial-author">
+                                <strong>Emma & Thomas</strong>, Netherlands
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section py-5 text-center">
+            <div class="container">
+                <h2 class="cta-title mb-4">Ready to Plan Your Perfect Wachau Vacation?</h2>
+                <p class="cta-text mb-4">Let us handle all the details while you focus on enjoying the beautiful Wachau, Krems, and Kamptal regions.</p>
+                <div class="cta-buttons">
+                    <a href="planner.html" class="btn btn-primary btn-lg me-2">Start Planning</a>
+                    <a href="assistant.html" class="btn btn-outline-primary btn-lg">Ask Our AI Assistant</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Wachau Vacation Planner</h5>
+                    <p>Your personalized vacation planning service for the Wachau, Krems, and Kamptal regions of Austria.</p>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="planner.html" class="text-white">Vacation Planner</a></li>
+                        <li><a href="assistant.html" class="text-white">AI Assistant</a></li>
+                        <li><a href="terms.html" class="text-white">Terms</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-envelope me-2"></i> info@wachau-planner.com</li>
+                        <li><i class="fas fa-phone me-2"></i> +43 123 456 789</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="row">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <p class="mb-0">&copy; 2025 Wachau Vacation Planner. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="terms.html" class="text-white me-3">Terms of Service</a>
+                    <a href="terms.html#privacy" class="text-white">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

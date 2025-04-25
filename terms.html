@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Wachau Vacation Planner</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Wachau Vacation Planner</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="planner.html">Vacation Planner</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="assistant.html">AI Assistant</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="terms.html">Terms</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-globe"></i> Language
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                                <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">English</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="changeLanguage('de')">Deutsch</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="terms-header-section py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h1 class="section-title mb-4">Terms of Service</h1>
+                        <p class="lead mb-0">Please read these terms carefully before using our vacation planning services.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="terms-content-section py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <div class="card shadow">
+                            <div class="card-body p-4">
+                                <div class="terms-navigation mb-4">
+                                    <ul class="nav nav-pills">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#service-overview">Service Overview</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#booking-payment">Booking & Payment</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#cancellation">Cancellation Policy</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#disclaimer">Disclaimer</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#privacy">Privacy Policy</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div id="service-overview" class="terms-section mb-5">
+                                    <h2 class="mb-4">1. Service Overview</h2>
+                                    
+                                    <p>Wachau Vacation Planner ("we," "us," or "our") provides personalized vacation planning services for the Wachau, Krems, and Kamptal regions of Austria. Our services include:</p>
+                                    
+                                    <ul class="mb-4">
+                                        <li>Creating customized vacation itineraries based on client preferences</li>
+                                        <li>Booking accommodations on behalf of clients</li>
+                                        <li>Making restaurant reservations</li>
+                                        <li>Arranging activities, tours, and experiences</li>
+                                        <li>Providing comprehensive vacation documentation</li>
+                                        <li>Offering customer support before and during the vacation</li>
+                                    </ul>
+                                    
+                                    <p>By using our services, you agree to these Terms of Service in their entirety. If you do not agree with any part of these terms, please do not use our services.</p>
+                                </div>
+
+                                <div id="booking-payment" class="terms-section mb-5">
+                                    <h2 class="mb-4">2. Booking and Payment Terms</h2>
+                                    
+                                    <h4 class="mb-3">2.1 Booking Process</h4>
+                                    <p>The booking process consists of the following steps:</p>
+                                    <ol class="mb-4">
+                                        <li>Client submits vacation preferences through our planning form</li>
+                                        <li>We create a personalized vacation plan within 48 hours</li>
+                                        <li>Client reviews the plan and requests any adjustments</li>
+                                        <li>Client approves the final plan</li>
+                                        <li>Client makes payment</li>
+                                        <li>We confirm all bookings and send comprehensive vacation documentation</li>
+                                    </ol>
+                                    
+                                    <h4 class="mb-3">2.2 Payment Terms</h4>
+                                    <p>Our payment terms are as follows:</p>
+                                    <ul class="mb-4">
+                                        <li>A 25% deposit is required to confirm your booking</li>
+                                        <li>The remaining balance is due 30 days before your arrival date</li>
+                                        <li>For bookings made less than 30 days before arrival, full payment is required at the time of booking</li>
+                                        <li>All payments are processed securely through our payment provider</li>
+                                        <li>Prices are quoted in Euros (€)</li>
+                                    </ul>
+                                    
+                                    <h4 class="mb-3">2.3 Service Fee</h4>
+                                    <p>Our service fee is included in the total price and is calculated as a percentage of the total vacation cost, typically ranging from 10-15% depending on the complexity of the itinerary and the services included. The exact fee will be clearly indicated in your vacation plan before you confirm the booking.</p>
+                                    
+                                    <div class="alert alert-info mb-4">
+                                        <p class="mb-0"><i class="fas fa-info-circle me-2"></i> The service fee covers our planning services, booking management, documentation preparation, and customer support throughout your vacation.</p>
+                                    </div>
+                                </div>
+
+                                <div id="cancellation" class="terms-section mb-5">
+                                    <h2 class="mb-4">3. Cancellation and Refund Policy</h2>
+                                    
+                                    <h4 class="mb-3">3.1 Cancellation by Client</h4>
+                                    <p>Our standard cancellation policy is as follows:</p>
+                                    <ul class="mb-4">
+                                        <li>Cancellations made 60+ days before arrival: Full refund minus the service fee</li>
+                                        <li>Cancellations made 30-59 days before arrival: 75% refund minus the service fee</li>
+                                        <li>Cancellations made 15-29 days before arrival: 50% refund minus the service fee</li>
+                                        <li>Cancellations made less than 15 days before arrival: No refund</li>
+                                    </ul>
+                                    
+                                    <p>Please note that specific accommodations, activities, or services may have their own cancellation policies that differ from our standard policy. These will be clearly communicated in your vacation plan.</p>
+                                    
+                                    <h4 class="mb-3">3.2 Modifications to Bookings</h4>
+                                    <p>Modifications to your booking may be possible subject to availability and any change fees imposed by service providers. Requests for modifications should be made in writing as early as possible. We cannot guarantee that all modification requests can be accommodated, especially those made close to your arrival date.</p>
+                                    
+                                    <h4 class="mb-3">3.3 Cancellation by Service Providers</h4>
+                                    <p>In the rare event that a service provider (hotel, restaurant, activity provider, etc.) cancels your booking, we will make every reasonable effort to find a suitable alternative of equal or higher quality at no additional cost to you. If no suitable alternative is available, you will receive a refund for the canceled service.</p>
+                                </div>
+
+                                <div id="disclaimer" class="terms-section mb-5">
+                                    <h2 class="mb-4">4. Disclaimer of Liability</h2>
+                                    
+                                    <div class="alert alert-warning mb-4">
+                                        <h5 class="alert-heading">Important Notice:</h5>
+                                        <p class="mb-0">We are not responsible for mistakes made by third parties. We do not take initiative for refunds in case of issues with third-party services.</p>
+                                    </div>
+                                    
+                                    <h4 class="mb-3">4.1 Third-Party Services</h4>
+                                    <p>While we carefully select our service providers and partners, we act solely as an intermediary between you and the service providers (hotels, restaurants, transportation companies, activity providers, etc.). We are not responsible for any acts, errors, omissions, representations, warranties, breaches, or negligence of any such suppliers or for any personal injuries, death, property damage, or other damages or expenses resulting from their services.</p>
+                                    
+                                    <h4 class="mb-3">4.2 Force Majeure</h4>
+                                    <p>We shall not be liable for any delay or failure to perform our obligations under these Terms of Service resulting from causes beyond our reasonable control, including but not limited to: acts of God, natural disasters, pandemic, epidemic, government restrictions, wars, terrorism, labor disputes, or power failures.</p>
+                                    
+                                    <h4 class="mb-3">4.3 Limitation of Liability</h4>
+                                    <p>Our maximum liability for any claim, including the cost of any services provided, shall not exceed the total amount paid by you for the services in question. In no event shall we be liable for any indirect, special, incidental, or consequential damages.</p>
+                                    
+                                    <h4 class="mb-3">4.4 Travel Insurance</h4>
+                                    <p>We strongly recommend that all clients purchase comprehensive travel insurance to protect against unforeseen circumstances, including trip cancellation, medical emergencies, and travel delays. Travel insurance is not included in our services and must be purchased separately.</p>
+                                </div>
+
+                                <div id="privacy" class="terms-section">
+                                    <h2 class="mb-4">5. Privacy Policy</h2>
+                                    
+                                    <h4 class="mb-3">5.1 Information Collection</h4>
+                                    <p>We collect personal information that you provide to us when using our services, including but not limited to:</p>
+                                    <ul class="mb-4">
+                                        <li>Contact information (name, email, phone number)</li>
+                                        <li>Travel preferences and requirements</li>
+                                        <li>Payment information</li>
+                                        <li>Special requests or requirements</li>
+                                    </ul>
+                                    
+                                    <h4 class="mb-3">5.2 Use of Information</h4>
+                                    <p>We use the information we collect to:</p>
+                                    <ul class="mb-4">
+                                        <li>Provide and personalize our services</li>
+                                        <li>Process bookings and payments</li>
+                                        <li>Communicate with you about your vacation</li>
+                                        <li>Improve our services</li>
+                                        <li>Comply with legal obligations</li>
+                                    </ul>
+                                    
+                                    <h4 class="mb-3">5.3 Information Sharing</h4>
+                                    <p>We may share your information with:</p>
+                                    <ul class="mb-4">
+                                        <li>Service providers (hotels, restaurants, activity providers) as necessary to fulfill your booking</li>
+                                        <li>Payment processors to process transactions</li>
+                                        <li>Legal authorities when required by law</li>
+                                    </ul>
+                                    
+                                    <p>We do not sell or rent your personal information to third parties for marketing purposes.</p>
+                                    
+                                    <h4 class="mb-3">5.4 Data Security</h4>
+                                    <p>We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, accidental loss, or destruction. However, no Internet transmission is ever completely secure or error-free.</p>
+                                    
+                                    <h4 class="mb-3">5.5 Your Rights</h4>
+                                    <p>You have the right to:</p>
+                                    <ul class="mb-4">
+                                        <li>Access the personal information we hold about you</li>
+                                        <li>Request correction of inaccurate information</li>
+                                        <li>Request deletion of your information (subject to legal requirements)</li>
+                                        <li>Object to certain processing of your information</li>
+                                        <li>Request a copy of your information in a structured, commonly used format</li>
+                                    </ul>
+                                    
+                                    <p>To exercise these rights, please contact us at privacy@wachau-planner.com.</p>
+                                </div>
+
+                                <div class="terms-footer mt-5">
+                                    <p>Last updated: April 25, 2025</p>
+                                    <p>By using our services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.</p>
+                                    <p>If you have any questions about these Terms, please contact us at info@wachau-planner.com.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Wachau Vacation Planner</h5>
+                    <p>Your personalized vacation planning service for the Wachau, Krems, and Kamptal regions of Austria.</p>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="planner.html" class="text-white">Vacation Planner</a></li>
+                        <li><a href="assistant.html" class="text-white">AI Assistant</a></li>
+                        <li><a href="terms.html" class="text-white">Terms</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-envelope me-2"></i> info@wachau-planner.com</li>
+                        <li><i class="fas fa-phone me-2"></i> +43 123 456 789</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="row">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <p class="mb-0">&copy; 2025 Wachau Vacation Planner. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="terms.html" class="text-white me-3">Terms of Service</a>
+                    <a href="terms.html#privacy" class="text-white">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

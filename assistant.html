@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant - Wachau Vacation Planner</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Wachau Vacation Planner</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="planner.html">Vacation Planner</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="assistant.html">AI Assistant</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="terms.html">Terms</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-globe"></i> Language
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                                <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">English</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="changeLanguage('de')">Deutsch</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="assistant-section py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="section-title text-center mb-4">AI Vacation Assistant</h1>
+                        <p class="text-center mb-5">Ask me anything about the Wachau, Krems, and Kamptal regions. I can help you plan your perfect vacation with recommendations for accommodations, activities, wine tours, and more.</p>
+                        
+                        <div class="chat-container mb-4">
+                            <div class="message message-assistant">
+                                Hello! I'm your Wachau Vacation Assistant. How can I help you plan your perfect trip to the Wachau, Krems, and Kamptal regions of Austria?
+                            </div>
+                        </div>
+                        
+                        <div class="suggestion-chips mb-3">
+                            <div class="suggestion-chip">Tell me about wine tours</div>
+                            <div class="suggestion-chip">Best biking routes</div>
+                            <div class="suggestion-chip">Recommended hotels</div>
+                            <div class="suggestion-chip">Local restaurants</div>
+                            <div class="suggestion-chip">Cost of vacation packages</div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <input type="text" id="message-input" class="form-control" placeholder="Type your question here...">
+                            <button id="send-button" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Send
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="assistant-info-section py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <h2 class="section-title mb-4">How Our AI Assistant Helps You</h2>
+                        <p>Our AI Assistant is designed to provide you with personalized information about the Wachau, Krems, and Kamptal regions to help you plan your perfect vacation. Here's how it can assist you:</p>
+                        <ul class="mb-4">
+                            <li>Get recommendations for accommodations based on your preferences</li>
+                            <li>Discover the best wine tours and tastings in the region</li>
+                            <li>Find biking routes suitable for your experience level</li>
+                            <li>Learn about local cuisine and restaurant recommendations</li>
+                            <li>Understand the costs and what's included in our vacation packages</li>
+                            <li>Get answers to any questions about the region and your trip</li>
+                        </ul>
+                        <p>The more specific your questions, the more tailored our recommendations will be!</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title mb-4">Popular Questions</h3>
+                                <div class="accordion" id="popularQuestionsAccordion">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question1" aria-expanded="false" aria-controls="question1">
+                                                What are the best wineries to visit in Wachau?
+                                            </button>
+                                        </h2>
+                                        <div id="question1" class="accordion-collapse collapse" data-bs-parent="#popularQuestionsAccordion">
+                                            <div class="accordion-body">
+                                                The Wachau Valley is home to many excellent wineries. Some of the most renowned include Domäne Wachau, FX Pichler, Rudi Pichler, and Weingut Knoll. Most offer tastings and tours, and we can arrange these as part of your vacation package.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question2" aria-expanded="false" aria-controls="question2">
+                                                How difficult are the biking routes in the region?
+                                            </button>
+                                        </h2>
+                                        <div id="question2" class="accordion-collapse collapse" data-bs-parent="#popularQuestionsAccordion">
+                                            <div class="accordion-body">
+                                                The Danube Cycle Path (Donauradweg) is mostly flat and suitable for all fitness levels. There are also more challenging routes through the vineyards and hills for experienced cyclists. We can recommend routes based on your experience and preferences.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question3" aria-expanded="false" aria-controls="question3">
+                                                What's the best time of year to visit?
+                                            </button>
+                                        </h2>
+                                        <div id="question3" class="accordion-collapse collapse" data-bs-parent="#popularQuestionsAccordion">
+                                            <div class="accordion-body">
+                                                The best time to visit the Wachau region is from late spring (May) to early autumn (October). Summer (June-August) offers warm weather perfect for biking and outdoor activities, while autumn (September-October) is ideal for wine enthusiasts as it's harvest season.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question4" aria-expanded="false" aria-controls="question4">
+                                                What's included in your vacation packages?
+                                            </button>
+                                        </h2>
+                                        <div id="question4" class="accordion-collapse collapse" data-bs-parent="#popularQuestionsAccordion">
+                                            <div class="accordion-body">
+                                                Our vacation packages typically include accommodation, breakfast, selected activities (like wine tastings or guided tours), bike rentals if requested, restaurant reservations, and a comprehensive vacation plan document. We handle all the bookings for you, and you pay one total amount that includes our service fee.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="cta-section py-5 text-center">
+            <div class="container">
+                <h2 class="cta-title mb-4">Ready to Plan Your Perfect Wachau Vacation?</h2>
+                <p class="cta-text mb-4">Use our Vacation Planner to create your customized trip to the Wachau, Krems, and Kamptal regions.</p>
+                <a href="planner.html" class="btn btn-primary btn-lg">Start Planning Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Wachau Vacation Planner</h5>
+                    <p>Your personalized vacation planning service for the Wachau, Krems, and Kamptal regions of Austria.</p>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="planner.html" class="text-white">Vacation Planner</a></li>
+                        <li><a href="assistant.html" class="text-white">AI Assistant</a></li>
+                        <li><a href="terms.html" class="text-white">Terms</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-envelope me-2"></i> info@wachau-planner.com</li>
+                        <li><i class="fas fa-phone me-2"></i> +43 123 456 789</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="row">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <p class="mb-0">&copy; 2025 Wachau Vacation Planner. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="terms.html" class="text-white me-3">Terms of Service</a>
+                    <a href="terms.html#privacy" class="text-white">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

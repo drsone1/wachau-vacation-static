@@ -1,0 +1,447 @@
+/* General Styles */
+:root {
+    --primary-color: #3b82f6;
+    --secondary-color: #1e40af;
+    --light-color: #f3f4f6;
+    --dark-color: #1f2937;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header Styles */
+.navbar-brand {
+    font-weight: 700;
+    color: var(--primary-color) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)), url('../images/wachau-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #4b5563;
+}
+
+.hero-image {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.hero-buttons .btn {
+    padding: 0.75rem 1.5rem;
+}
+
+/* Features Section */
+.section-title {
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 2rem;
+}
+
+.feature-card {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    color: var(--primary-color);
+}
+
+.feature-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* About Section */
+.about-section img {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.region-features {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.region-features li {
+    margin-bottom: 0.5rem;
+}
+
+/* How It Works Section */
+.step-card {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.step-number {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    font-weight: 700;
+}
+
+.step-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+/* Testimonials Section */
+.testimonial-card {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+/* CTA Section */
+.cta-section {
+    background-color: #e0f2fe;
+    padding: 4rem 0;
+}
+
+.cta-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+.cta-text {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-color);
+}
+
+.footer h5 {
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: var(--primary-color);
+}
+
+/* AI Assistant Page */
+.chat-container {
+    height: 400px;
+    overflow-y: auto;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    border: 1px solid #dee2e6;
+}
+
+.message {
+    margin-bottom: 1rem;
+    max-width: 80%;
+}
+
+.message-user {
+    margin-left: auto;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 1rem 1rem 0 1rem;
+    padding: 0.75rem 1rem;
+}
+
+.message-assistant {
+    background-color: #e2e8f0;
+    border-radius: 1rem 1rem 1rem 0;
+    padding: 0.75rem 1rem;
+}
+
+.suggestion-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.suggestion-chip {
+    background-color: #e2e8f0;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.suggestion-chip:hover {
+    background-color: #cbd5e1;
+}
+
+/* Vacation Planner Page */
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+}
+
+.step-indicator {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.step-indicator-item {
+    flex: 1;
+    text-align: center;
+    padding: 0.5rem;
+    position: relative;
+}
+
+.step-indicator-item::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #e2e8f0;
+    z-index: -1;
+}
+
+.step-indicator-item:first-child::after {
+    left: 50%;
+}
+
+.step-indicator-item:last-child::after {
+    right: 50%;
+}
+
+.step-indicator-number {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #e2e8f0;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.step-indicator-item.active .step-indicator-number,
+.step-indicator-item.completed .step-indicator-number {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.step-indicator-item.active .step-indicator-text,
+.step-indicator-item.completed .step-indicator-text {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 3rem 0;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .cta-title {
+        font-size: 1.75rem;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Language Switcher */
+.language-switcher {
+    display: flex;
+    align-items: center;
+}
+
+.language-option {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.language-flag {
+    width: 20px;
+    height: 15px;
+    margin-right: 0.5rem;
+}
+
+/* Terms Page */
+.terms-section h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.terms-section p {
+    margin-bottom: 1rem;
+}
+
+.terms-section ul {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+}
+
+.terms-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Vacation Plan Document */
+.vacation-plan {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.vacation-plan-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.vacation-plan-day {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.vacation-plan-day h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.vacation-plan-activity {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--primary-color);
+}
+
+.vacation-plan-time {
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.vacation-plan-summary {
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.vacation-plan-summary h3 {
+    margin-bottom: 1rem;
+}
+
+.vacation-plan-summary table {
+    width: 100%;
+}
+
+.vacation-plan-summary th {
+    text-align: left;
+    padding: 0.5rem;
+}
+
+.vacation-plan-summary td {
+    padding: 0.5rem;
+}
+
+/* Print Styles */
+@media print {
+    header, footer, .no-print {
+        display: none;
+    }
+    
+    body {
+        font-size: 12pt;
+    }
+    
+    .vacation-plan {
+        box-shadow: none;
+        padding: 0;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+}

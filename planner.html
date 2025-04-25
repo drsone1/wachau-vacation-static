@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacation Planner - Wachau Vacation Planner</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Wachau Vacation Planner</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="planner.html">Vacation Planner</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="assistant.html">AI Assistant</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="terms.html">Terms</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-globe"></i> Language
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                                <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">English</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="changeLanguage('de')">Deutsch</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="planner-header-section py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h1 class="section-title mb-4">Plan Your Perfect Wachau Vacation</h1>
+                        <p class="lead mb-4">Tell us about your preferences, and we'll create a personalized vacation plan for the Wachau, Krems, and Kamptal regions. We'll handle all the bookings and provide you with a comprehensive vacation document.</p>
+                        <div class="alert alert-info">
+                            <i class="fas fa-info-circle me-2"></i> Your vacation plan includes accommodations, activities, restaurant reservations, and a service fee. You'll pay one total amount for everything.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="vacation-planner-section py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <div class="card shadow">
+                            <div class="card-body p-4">
+                                <div class="step-indicator mb-5">
+                                    <div class="step-indicator-item">
+                                        <div class="step-indicator-number">1</div>
+                                        <div class="step-indicator-text">Basic Info</div>
+                                    </div>
+                                    <div class="step-indicator-item">
+                                        <div class="step-indicator-number">2</div>
+                                        <div class="step-indicator-text">Interests</div>
+                                    </div>
+                                    <div class="step-indicator-item">
+                                        <div class="step-indicator-number">3</div>
+                                        <div class="step-indicator-text">Accommodations</div>
+                                    </div>
+                                    <div class="step-indicator-item">
+                                        <div class="step-indicator-number">4</div>
+                                        <div class="step-indicator-text">Activities</div>
+                                    </div>
+                                    <div class="step-indicator-item">
+                                        <div class="step-indicator-number">5</div>
+                                        <div class="step-indicator-text">Contact</div>
+                                    </div>
+                                </div>
+                                
+                                <form id="vacation-planner-form" class="vacation-planner-form">
+                                    <!-- Step 1: Basic Information -->
+                                    <div class="form-step">
+                                        <h3 class="mb-4">Basic Information</h3>
+                                        
+                                        <div class="row mb-3">
+                                            <div class="col-md-6 mb-3 mb-md-0">
+                                                <label for="arrival-date" class="form-label">Arrival Date</label>
+                                                <input type="date" class="form-control" id="arrival-date" name="arrival_date" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="departure-date" class="form-label">Departure Date</label>
+                                                <input type="date" class="form-control" id="departure-date" name="departure_date" required>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row mb-3">
+                                            <div class="col-md-6 mb-3 mb-md-0">
+                                                <label for="adults" class="form-label">Number of Adults</label>
+                                                <select class="form-select" id="adults" name="adults" required>
+                                                    <option value="">Select</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6+">6+</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="children" class="form-label">Number of Children</label>
+                                                <select class="form-select" id="children" name="children" required>
+                                                    <option value="0">0</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5+">5+</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label for="budget" class="form-label">Budget Range (per person)</label>
+                                            <select class="form-select" id="budget" name="budget" required>
+                                                <option value="">Select</option>
+                                                <option value="economy">Economy (€800-1200)</option>
+                                                <option value="standard">Standard (€1200-2000)</option>
+                                                <option value="premium">Premium (€2000-3000)</option>
+                                                <option value="luxury">Luxury (€3000+)</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="d-flex justify-content-end">
+                                            <button type="button" class="btn btn-primary btn-next">Next <i class="fas fa-arrow-right ms-2"></i></button>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Step 2: Interests -->
+                                    <div class="form-step">
+                                        <h3 class="mb-4">Your Interests</h3>
+                                        
+                                        <p class="mb-3">What are you most interested in experiencing during your visit to the Wachau region? (Select all that apply)</p>
+                                        
+                                        <div class="row mb-4">
+                                            <div class="col-md-6 mb-3">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="interest-wine" name="interests" value="wine">
+                                                    <label class="form-check-label" for="interest-wine">
+                                                        <i class="fas fa-wine-glass-alt me-2 text-primary"></i> Wine Tasting & Vineyard Tours
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="interest-biking" name="interests" value="biking">
+                                                    <label class="form-check-label" for="interest-biking">
+                                                        <i class="fas fa-bicycle me-2 text-primary"></i> Biking & Cycling
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="interest-hiking" name="interests" value="hiking">
+                                                    <label class="form-check-label" for="interest-hiking">
+                                                        <i class="fas fa-hiking me-2 text-primary"></i> Hiking & Nature
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="interest-history" name="interests" value="history">
+                                                    <label class="form-check-label" for="interest-history">
+                                                        <i class="fas fa-landmark me-2 text-primary"></i> History & Culture
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="interest-food" name="interests" value="food">
+                                                    <label class="form-check-label" for="interest-food">
+                                                        <i class="fas fa-utensils me-2 text-primary"></i> Culinary Experiences
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="interest-relaxation" name="interests" value="relaxation">
+                                                    <label class="form-check-label" for="interest-relaxation">
+                                                        <i class="fas fa-spa me-2 text-primary"></i> Relaxation & Wellness
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mb-4">
+                                            <label for="special-interests" class="form-label">Any specific activities or experiences you're interested in?</label>
+                                            <textarea class="form-control" id="special-interests" name="special_interests" rows="3" placeholder="E.g., specific wineries, historical sites, or activities you'd like to include"></textarea>
+                                        </div>
+                                        
+                                        <div class="d-flex justify-content-between">
+                                            <button type="button" class="btn btn-outline-secondary btn-prev"><i class="fas fa-arrow-left me-2"></i> Previous</button>
+                                            <button type="button" class="btn btn-primary btn-next">Next <i class="fas fa-arrow-right ms-2"></i></button>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Step 3: Accommodations -->
+                                    <div class="form-step">
+                                        <h3 class="mb-4">Accommodation Preferences</h3>
+                                        
+                                        <div class="mb-3">
+                                            <label for="accommodation-type" class="form-label">Preferred Accommodation Type</label>
+                                            <select class="form-select" id="accommodation-type" name="accommodation_type" required>
+                                                <option value="">Select</option>
+                                                <option value="hotel">Hotel</option>
+                                                <option value="guesthouse">Guesthouse / B&B</option>
+                                                <option value="apartment">Vacation Apartment</option>
+                                                <option value="winery">Winery Accommodation</option>
+                                                <option value="luxury">Luxury Resort</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label for="room-type" class="form-label">Room Type</label>
+                                            <select class="form-select" id="room-type" name="room_type" required>
+                                                <option value="">Select</option>
+                                                <option value="single">Single Room</option>
+                                                <option value="double">Double Room</option>
+                                                <option value="twin">Twin Room</option>
+                                                <option value="family">Family Room</option>
+                                                <option value="suite">Suite</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="mb-4">
+                                            <p class="mb-2">Important Amenities (Select all that apply)</p>
+                                            <div class="row">
+                                                <div class="col-md-6 mb-2">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="amenity-wifi" name="amenities" value="wifi">
+                                                        <label class="form-check-label" for="amenity-wifi">Free WiFi</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="amenity-breakfast" name="amenities" value="breakfast">
+                                                        <label class="form-check-label" for="amenity-breakfast">Breakfast Included</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="amenity-parking" name="amenities" value="parking">
+                                                        <label class="form-check-label" for="amenity-parking">Free Parking</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="amenity-ac" name="amenities" value="ac">
+                                                        <label class="form-check-label" for="amenity-ac">Air Conditioning</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="amenity-pool" name="amenities" value="pool">
+                                                        <label class="form-check-label" for="amenity-pool">Swimming Pool</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="amenity-restaurant" name="amenities" value="restaurant">
+                                                        <label class="form-check-label" for="amenity-restaurant">On-site Restaurant</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mb-4">
+                                            <label for="accommodation-notes" class="form-label">Additional Accommodation Requests</label>
+                                            <textarea class="form-control" id="accommodation-notes" name="accommodation_notes" rows="2" placeholder="Any specific requests or preferences for your accommodation"></textarea>
+                                        </div>
+                                        
+                                        <div class="d-flex justify-content-between">
+                                            <button type="button" class="btn btn-outline-secondary btn-prev"><i class="fas fa-arrow-left me-2"></i> Previous</button>
+                                            <button type="button" class="btn btn-primary btn-next">Next <i class="fas fa-arrow-right ms-2"></i></button>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Step 4: Activities -->
+                                    <div class="form-step">
+                                        <h3 class="mb-4">Activities & Experiences</h3>
+                                        
+                                        <div class="mb-4">
+                                            <p class="mb-2">Which activities would you like to include in your vacation? (Select all that apply)</p>
+                                            
+                                            <div class="row">
+                                                <div class="col-md-6 mb-3">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="activity-wine-tasting" name="activities" value="wine_tasting">
+                                                        <label class="form-check-label" for="activity-wine-tasting">
+                                                            <i class="fas fa-wine-bottle me-2 text-primary"></i> Winery Tours & Tastings
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="activity-bike-rental" name="activities" value="bike_rental">
+                                                        <label class="form-check-label" for="activity-bike-rental">
+                                                            <i class="fas fa-bicycle me-2 text-primary"></i> Bike Rental & Routes
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="activity-danube-cruise" name="activities" value="danube_cruise">
+                                                        <label class="form-check-label" for="activity-danube-cruise">
+                                                            <i class="fas fa-ship me-2 text-primary"></i> Danube River Cruise
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="activity-guided-tour" name="activities" value="guided_tour">
+                                                        <label class="form-check-label" for="activity-guided-tour">
+                                                            <i class="fas fa-map-marked-alt me-2 text-primary"></i> Guided Historical Tours
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="activity-cooking" name="activities" value="cooking">
+                                                        <label class="form-check-label" for="activity-cooking">
+                                                            <i class="fas fa-utensils me-2 text-primary"></i> Cooking Class / Food Tour
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="activity-hiking" name="activities" value="hiking">
+                                                        <label class="form-check-label" for="activity-hiking">
+                                                            <i class="fas fa-hiking me-2 text-primary"></i> Hiking Excursions
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="activity-spa" name="activities" value="spa">
+                                                        <label class="form-check-label" for="activity-spa">
+                                                            <i class="fas fa-spa me-2 text-primary"></i> Spa & Wellness Treatments
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="activity-photography" name="activities" value="photography">
+                                                        <label class="form-check-label" for="activity-photography">
+                                                            <i class="fas fa-camera me-2 text-primary"></i> Photography Tour
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mb-4">
+                                            <label for="dining-preferences" class="form-label">Dining Preferences</label>
+                                            <select class="form-select" id="dining-preferences" name="dining_preferences" required>
+                                                <option value="">Select</option>
+                                                <option value="traditional">Traditional Austrian Cuisine</option>
+                                                <option value="fine_dining">Fine Dining Experiences</option>
+                                                <option value="wine_taverns">Local Wine Taverns (Heurigen)</option>
+                                                <option value="mix">Mix of Different Options</option>
+                                                <option value="self_catering">Mostly Self-Catering</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="mb-4">
+                                            <label for="activity-notes" class="form-label">Any specific activities or restaurants you'd like to include?</label>
+                                            <textarea class="form-control" id="activity-notes" name="activity_notes" rows="2" placeholder="E.g., specific restaurants, activities, or experiences you're interested in"></textarea>
+                                        </div>
+                                        
+                                        <div class="d-flex justify-content-between">
+                                            <button type="button" class="btn btn-outline-secondary btn-prev"><i class="fas fa-arrow-left me-2"></i> Previous</button>
+                                            <button type="button" class="btn btn-primary btn-next">Next <i class="fas fa-arrow-right ms-2"></i></button>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Step 5: Contact Information -->
+                                    <div class="form-step">
+                                        <h3 class="mb-4">Contact Information</h3>
+                                        
+                                        <div class="row mb-3">
+                                            <div class="col-md-6 mb-3 mb-md-0">
+                                                <label for="first-name" class="form-label">First Name</label>
+                                                <input type="text" class="form-control" id="first-name" name="first_name" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="last-name" class="form-label">Last Name</label>
+                                                <input type="text" class="form-control" id="last-name" name="last_name" required>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">Email Address</label>
+                                            <input type="email" class="form-control" id="email" name="email" required>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label for="phone" class="form-label">Phone Number</label>
+                                            <input type="tel" class="form-control" id="phone" name="phone" required>
+                                        </div>
+                                        
+                                        <div class="mb-4">
+                                            <label for="additional-info" class="form-label">Additional Information</label>
+                                            <textarea class="form-control" id="additional-info" name="additional_info" rows="3" placeholder="Any other information you'd like us to know"></textarea>
+                                        </div>
+                                        
+                                        <div class="mb-4 form-check">
+                                            <input type="checkbox" class="form-check-input" id="terms-check" name="terms_accepted" required>
+                                            <label class="form-check-label" for="terms-check">
+                                                I accept the <a href="terms.html" target="_blank">Terms of Service</a> and understand that a service fee is included in the total price.
+                                            </label>
+                                        </div>
+                                        
+                                        <div class="alert alert-info mb-4">
+                                            <p class="mb-0"><i class="fas fa-info-circle me-2"></i> After submitting this form, we'll create a personalized vacation plan for you. Once you approve it, we'll handle all the bookings and send you a comprehensive vacation document.</p>
+                                        </div>
+                                        
+                                        <div class="d-flex justify-content-between">
+                                            <button type="button" class="btn btn-outline-secondary btn-prev"><i class="fas fa-arrow-left me-2"></i> Previous</button>
+                                            <button type="submit" class="btn btn-success">Submit Request</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="faq-section py-5 bg-light">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Frequently Asked Questions</h2>
+                
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                        What's included in your vacation planning service?
+                                    </button>
+                                </h2>
+                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Our vacation planning service includes creating a personalized itinerary based on your preferences, booking accommodations, making restaurant reservations, arranging activities and experiences, and providing you with a comprehensive vacation document. We handle all the bookings for you, and you pay one total amount that includes our service fee.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                        How much is the service fee?
+                                    </button>
+                                </h2>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Our service fee is calculated as a percentage of the total vacation cost, typically ranging from 10-15% depending on the complexity of the itinerary and the services included. The exact fee will be clearly indicated in your vacation plan before you confirm the booking.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                        What happens after I submit this form?
+                                    </button>
+                                </h2>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        After you submit the form, we'll create a personalized vacation plan based on your preferences within 48 hours. We'll send this plan to you for review, and you can request any adjustments. Once you approve the plan, we'll handle all the bookings and send you a confirmation with a comprehensive vacation document.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                        Can I make changes to my vacation plan after booking?
+                                    </button>
+                                </h2>
+                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Yes, you can request changes to your vacation plan after booking, subject to availability and any change fees imposed by the service providers. We'll do our best to accommodate your requests, but please note that changes made close to your arrival date may be limited.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                                        What is your cancellation policy?
+                                    </button>
+                                </h2>
+                                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Our cancellation policy varies depending on the services included in your vacation plan. Generally, cancellations made 30+ days before arrival receive a full refund minus the service fee. Cancellations made 15-29 days before arrival receive a 50% refund. Cancellations made less than 15 days before arrival are non-refundable. The specific cancellation policy for your booking will be clearly stated in your vacation plan.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Wachau Vacation Planner</h5>
+                    <p>Your personalized vacation planning service for the Wachau, Krems, and Kamptal regions of Austria.</p>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="planner.html" class="text-white">Vacation Planner</a></li>
+                        <li><a href="assistant.html" class="text-white">AI Assistant</a></li>
+                        <li><a href="terms.html" class="text-white">Terms</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-envelope me-2"></i> info@wachau-planner.com</li>
+                        <li><i class="fas fa-phone me-2"></i> +43 123 456 789</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="row">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <p class="mb-0">&copy; 2025 Wachau Vacation Planner. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="terms.html" class="text-white me-3">Terms of Service</a>
+                    <a href="terms.html#privacy" class="text-white">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
